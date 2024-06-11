@@ -41,3 +41,19 @@ Ans -
 - Single proto inheritent only one class
 - multiple is possible by Chaing(proto + proto)
 ![alt text](img/image.png)
+- object.getgetPrototypeOf(faang) it will inheritet all property
+- Object.setPrototypeOf()
+
+> # Promises and Quese
+- That is a placeholder that can resolve and reject in future.
+- Promise having two major things state and value.
+- state/Status is three type - Pending(default), rejected(error), fullfilled(sucess).
+- task Que - setTimeout, I/o operation, Ui Rendring, HTTP request and Timer all operation.it will go through browser Api
+- micro Task -  Promise Handler then(), catch(), finally(), 
+![alt text](img/image1.png)
+
+> # ASYNC And Await
+- it is kind of promises
+- Promise.resolve('Chai) === async()=>{return 'Chai} same 
+- await -  can suspended async function while we wait for awaited value return a resolved promise after await reset the async function get run in microtask.
+- ![alt text](img/image2.png)
