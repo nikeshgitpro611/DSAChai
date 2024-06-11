@@ -25,5 +25,19 @@ Ans -
 - It only defines the accessibility range, which may be at the function level, window level, or global level.
 - Three type of Scope: 
 01. Global Scope
+- Window and Global
 02. Local Scope
-03. 
+- 
+03. Block Scope
+- function scope it define inside of {}.
+
+# Scope Chain
+-  Chain of reffrances (Define -  js will search in local scope first and step by step go on global scope and find out variable this process is call reff Chain).
+- scop will go inner -> outer -> outer but cant be come from outer to inner.
+
+> # PROTOTYPE INHERITANCE AND CHAINING
+-  that allows objects to inherit properties and methods from other objects.
+- Linking a property from the parent object to the child object allows the child object to share and utilize the properties of the parent class.
+- Single proto inheritent only one class
+- multiple is possible by Chaing(proto + proto)
+![alt text](img/image.png)
