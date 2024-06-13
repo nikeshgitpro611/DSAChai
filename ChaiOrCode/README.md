@@ -45,6 +45,7 @@ Ans -
 - Object.setPrototypeOf()
 
 > # Promises and Quese
+- Promises provide a powerful way to handle asynchronous operations in JavaScript, making code more readable and maintainable code.
 - That is a placeholder that can resolve and reject in future.
 - Promise having two major things state and value.
 - state/Status is three type - Pending(default), rejected(error), fullfilled(sucess).
