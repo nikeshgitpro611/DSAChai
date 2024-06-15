@@ -58,3 +58,12 @@ Ans -
 - Promise.resolve('Chai) === async()=>{return 'Chai} same 
 - await -  can suspended async function while we wait for awaited value return a resolved promise after await reset the async function get run in microtask.
 - ![alt text](img/image2.png)
+
+> # Closer and Lexical Scope.
+
+- In JavaScript, a closure is a feature where an inner function has access to the outer (enclosing) function’s variables,but outer function can't be acess inner variable is called closer.
+- Inner lexical enviroment reffer to outer lexical enviroment. when outer lexical enviroment not refrance.
+![alt text](img/image3.png)
+- count++ is post increment where ++count is pre increment. suppose you write count++ means value increase after execute this statement. but in case ++count value will increase while executing this line.
+- ++count increments count immediately and returns the new value.
+- count++ returns the current value of count and then increments it.
