@@ -17,10 +17,10 @@ Ans -
 # Some cases of Declration
 - case-1 : Access Function before decleration then no Issue
 - case-2 : Access Var before decleration then undefine
-- case-1 : Access Let/const before decleration then Error will be come Reffrance Error
+- case-3 : Access Let/const before decleration then Error will be come Reffrance Error
 # Temporary Ded Zone
 - useing variable and function before actual decleration is called .
-
+- Variable are in scope but cant be acess.
 > # SCOPE AND SCOPE CHAIN
 - It only defines the accessibility range, which may be at the function level, window level, or global level.
 - Three type of Scope: 
@@ -85,4 +85,11 @@ contextFn.call(person, ['footbal', 'less']) //person is context
 const Assign = contextFn.bind(person, 'test') 
  Assign('jolly');
 
- 
+
+> ______________________________________DSA__________________________________
+
+> # STACK
+- a collection of elements that follow a specific order for adding and removing items.
+- we cant we remove array value from 0 index place.
+- work on principle Last In First Out (LIFO).
+- A stack is a type of data structure similar to an array, but it allows you to control how values are added and removed.
