@@ -67,3 +67,22 @@ Ans -
 - count++ is post increment where ++count is pre increment. suppose you write count++ means value increase after execute this statement. but in case ++count value will increase while executing this line.
 - ++count increments count immediately and returns the new value.
 - count++ returns the current value of count and then increments it.
+
+> # This Method
+- In JavaScript, the this keyword is a special identifier that refers to the context in which a function is executed. 
+- context may be Global or window
+- this behav will be change depend on function and arrow function.
+
+> # Call Apply And Bind
+# call
+- An immediately invoked function expression (IIFE) with a specified this value.
+![alt text](img/image4.png)
+# Apply
+- Kind of same but argumet Pass as an Array
+contextFn.call(person, ['footbal', 'less']) //person is context 
+# Bind
+- Return a new function with copy of privious function
+const Assign = contextFn.bind(person, 'test') 
+ Assign('jolly');
+
+ 
