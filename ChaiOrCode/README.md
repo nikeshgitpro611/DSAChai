@@ -1,3 +1,9 @@
+DSA -https://github.com/shanmukhipriya99/DSA-StephenGrider
+
+::::::::::::::::GIT COMMAND:::::::::::::::::::::
+**For Path Check** : git remote get-url origin.
+
+
 > # EVENT LOOP
 - We know that JavaScript is a single-threaded language, but the UI does not get stuck because its behavior is asynchronous and non-blocking. The event loop monitors everything in the call stack and tasks. First, it checks the microtask queue and then the task queue. If anything is present, it will be executed in the call stack. This process is known as asynchronous behavior.
 - Here we have container - 
@@ -57,13 +63,42 @@ Ans -
 - it is kind of promises
 - Promise.resolve('Chai) === async()=>{return 'Chai} same 
 - await -  can suspended async function while we wait for awaited value return a resolved promise after await reset the async function get run in microtask.
-- ![alt text](img/image2.png)
+```
+const test = Promise.resolve('First Test...');
+const functionData = async () => {
+  console.log('@nd data...');
+  const test2 = await test;
+  console.log(test2);
+};
+console.log('Data') //1
+functionData();//2
+```
 
 > # Closer and Lexical Scope.
 
 - In JavaScript, a closure is a feature where an inner function has access to the outer (enclosing) function’s variables,but outer function can't be acess inner variable is called closer.
 - Inner lexical enviroment reffer to outer lexical enviroment. when outer lexical enviroment not refrance.
-![alt text](img/image3.png)
+```
+const outerFn = (x)=>{
+  console.log(x)
+  return  (y) => {
+    console.log(x,y)
+    return x + y;
+  }
+}
+const result = outerFn(8);
+console.log('Result : ', result(9))
+// 2nd Example...
+const valCheck = (x) => {
+  let score = x;
+  return () => score++ //Start form initial val 9 PRE INCRIMENT
+  // return () => ++score //Increase Before 10 POST INCRIMENT
+}
+const val = valCheck(9);
+console.log("VAl : ",val())
+console.log("VAl : ",val())
+console.log("VAl : ",val());
+```
 - count++ is post increment where ++count is pre increment. suppose you write count++ means value increase after execute this statement. but in case ++count value will increase while executing this line.
 - ++count increments count immediately and returns the new value.
 - count++ returns the current value of count and then increments it.
@@ -76,7 +111,6 @@ Ans -
 > # Call Apply And Bind
 # call
 - An immediately invoked function expression (IIFE) with a specified this value.
-![alt text](img/image4.png)
 # Apply
 - Kind of same but argumet Pass as an Array
 contextFn.call(person, ['footbal', 'less']) //person is context 
@@ -84,6 +118,27 @@ contextFn.call(person, ['footbal', 'less']) //person is context
 - Return a new function with copy of privious function
 const Assign = contextFn.bind(person, 'test') 
  Assign('jolly');
+
+ ```
+ const person = {
+  name: 'Joniy',
+  age: 43,
+};
+// call
+function callMethod(pass1, pass2) {
+  console.log('Test : ', this.name, pass1, pass2);
+  let valString = `hello ${this.name} you ${pass1} and ${pass2}`;
+  console.log('valString : ', valString);
+}
+callMethod.call(person, 'test1', 'test2');
+
+//Apply
+callMethod.apply(person, ['applyTest1', 'applyTest2']);
+
+//Bind
+const AssignInVar = callMethod.bind(person, 'BondTest1', 'BindTest2'); //Val binding in a variable
+AssignInVar(); //Calling function...
+```
 
 
 > ______________________________________DSA__________________________________
