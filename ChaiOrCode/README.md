@@ -145,7 +145,20 @@ AssignInVar(); //Calling function...
 > ______________________________________DSA__________________________________
 
 > # STACK
+
+**Definition : ** a stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
+ This means that the last element added to the stack is the first one to be removed. 
+
 - a collection of elements that follow a specific order for adding and removing items.
 - we cant we remove array value from 0 index place.
 - work on principle Last In First Out (LIFO).
 - A stack is a type of data structure similar to an array, but it allows you to control how values are added and removed.
+> Applications of Stack:
+
+Expression evaluation (like postfix or prefix evaluation)
+
+Function call management (maintaining function calls in recursion)
+
+Backtracking algorithms (like DFS in graphs)
+
+Undo operations in text editors
